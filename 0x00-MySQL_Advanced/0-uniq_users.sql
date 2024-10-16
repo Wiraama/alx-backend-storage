@@ -1,8 +1,6 @@
--- script to create table user with the requirements
--- if table exist it will fail
--- to be executed on any database
-CREATE TABLE IF NOT EXISTS user (
+-- Script that creates a table users
+CREATE TABLE IF NOT EXISTS users (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	email VARCHAR(255) UNIQUE NOT NULL,
+	email VARCHAR(255) NOT NULL UNIQUE,
 	name VARCHAR(255)
 );
