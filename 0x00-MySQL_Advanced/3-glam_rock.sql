@@ -1,4 +1,4 @@
--- Write a SQL script that lists all bands with Glam rock as their main style, ranked by their longevity
+-- some shit
 SELECT
 	band_name,
 	(2022 - formed) AS lifespan
