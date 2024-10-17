@@ -1,5 +1,6 @@
 -- Write a SQL script that creates a stored procedure ComputeAverageWeightedScoreForUser that computes and store the average weighted score for a student.
 DELIMITER $$
+DROP PROCEDURE IF EXISTS ComputeAverageWeightedScoreForUser;
 CREATE PROCEDURE ComputeAverageWeightedScoreForUser(IN user_id INT)
 BEGIN
 	UPDATE user SET average_score = (SELECT
