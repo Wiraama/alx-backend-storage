@@ -4,5 +4,11 @@
 
 def schools_by_topic(mongo_collection, topic):
     """ ... """
-    doc = mongo_collection.find({"topic": topic})
-    return list(doc)
+    doc = {
+            'topic': {
+                '$elemMatch': {
+                    '$eq': topic,
+                    },
+                },
+            }
+    return [d for d in mongo_collection.find(doc)]
