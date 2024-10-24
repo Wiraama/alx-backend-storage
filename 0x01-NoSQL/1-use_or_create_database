@@ -1,4 +1,4 @@
 // Write a script that creates or uses the database my_db:
 if my_db:
 	use my_db;
-create my_db
+create my_db;
