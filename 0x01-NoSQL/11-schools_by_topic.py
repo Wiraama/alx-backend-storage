@@ -5,7 +5,7 @@
 def schools_by_topic(mongo_collection, topic):
     """ ... """
     doc = {
-            "topic": {
+            "topics": {
                 "$elemMatch": {
                     "$eq": topic,
                     },
