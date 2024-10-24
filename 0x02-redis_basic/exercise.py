@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """ ... """
+from functools import wraps
 import redis
 import uuid
 from typing import Union, Callable, Optional
@@ -21,6 +22,7 @@ class Cache:
         self._redis = redis.Redis()
         self._redis.flushdb()
 
+    @count_calls
     def store(self, data: Union[str, bytes, int, float]) -> str:
         key = str(uuid.uuid4())
         self._redis.set(key, data)
